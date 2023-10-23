@@ -1,5 +1,3 @@
-//chat_client.c
-
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -88,7 +86,6 @@ int main(int argc, char *argv[]){
 		printf("ERROR :: 1_Socket Create Error\n");
 		exit(1);
 	}
-	//printf("Socket Create!\n");
 	
 	struct sockaddr_in server_addr = {0};
 	server_addr.sin_family = AF_INET;
@@ -100,7 +97,6 @@ int main(int argc, char *argv[]){
 		printf("ERROR :: 2_Connect Error\n");
 		exit(1);
 	}
-	//printf("Connect Success!\n");
 	
 	pthread_create(&send_tid, NULL, sendMsg, NULL);
 	pthread_create(&receive_tid, NULL, receiveMsg, NULL);
