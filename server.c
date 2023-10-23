@@ -1,5 +1,3 @@
-//chat_server.c
-
 #include <stdio.h>
 #include <signal.h>
 #include <unistd.h>
@@ -92,6 +90,7 @@ void *client_handler(void *arg){
 	}
 	close(client_sock[id]);
 }
+
 int main(int argc, char* argv[]){
 	if( argc<2 ){
 		printf("ERROR Input Port Num\n");
